@@ -5,214 +5,250 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Portfolio Web">
     <title>Portfolio | Allan</title>
-    <link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAArElEQVR4nO2XQQrAMAgE/f+np6deAiWQVKNmB3IqFCa7UmsmekHQcae8CEE3hbdQeRGCz4tEslTKPZF2IgTNBBL5wOum0iSyi0RWUSITVK1VVK0JqtYq7auFdi3LsTR6gUSS/7O/zJ7fI0LQbLjPTHkRkpwRiZyCvxOx20VwmgUk4lS32bvwTKSNSCRIZOD0F52/d6yyIhyejZHtJLKAkkgC1Yeb3Wq3ERF2mAcEA+E7Kou21QAAAABJRU5ErkJggg==" type="image/x-icon">
-    <link rel="stylesheet" href="./css/header.css">
-    <link rel="stylesheet" href="./css/reset.css">
-    <link rel="stylesheet" href="./css/shared/main.css">
-    <link rel="stylesheet" href="./css/shared/mobile.css">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <script src="https://unpkg.com/scrollreveal"></script>
+    <style>
+        /* Reset CSS */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f8fc;
+            color: #333;
+        }
+
+        header {
+            background-color: #0044cc;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+        }
+
+        header .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        header .sidebar ul li {
+            display: inline;
+            margin-right: 15px;
+        }
+
+        header .sidebar ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        header .sidebar ul li a:hover {
+            text-decoration: underline;
+        }
+
+        .Container {
+            text-align: center;
+            padding: 50px 20px;
+            background-color: white;
+            margin-bottom: 20px;
+        }
+
+        .Container h1 {
+            font-size: 2.5rem;
+            color: #0044cc;
+        }
+
+        .Container legend {
+            font-size: 1.2rem;
+            color: #666;
+        }
+
+        .containerSegundo, .containercurriculo, .ContainerContato {
+            padding: 30px 20px;
+            background-color: #eaf2ff;
+            margin-bottom: 20px;
+        }
+
+        .containerSegundo h1 {
+            text-align: center;
+            color: #0044cc;
+        }
+
+        .main-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .text-wrapper {
+            margin: 10px;
+            padding: 20px;
+            background: white;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .text-wrapper h3 {
+            color: #0044cc;
+        }
+
+        .text-wrapper a {
+            color: #0066ff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .text-wrapper a:hover {
+            text-decoration: underline;
+        }
+
+        .curriculo {
+            text-align: center;
+        }
+
+        .btncurriculo a {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #0044cc;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .btncurriculo a:hover {
+            background-color: #003399;
+        }
+
+        .form-contato {
+            max-width: 500px;
+            margin: 0 auto;
+            background: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-contato h2 {
+            margin-bottom: 15px;
+            color: #0044cc;
+        }
+
+        .form-contato label {
+            font-weight: bold;
+            display: block;
+            margin-top: 10px;
+        }
+
+        .form-contato input {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .form-contato button {
+            margin-top: 15px;
+            background-color: #0044cc;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .form-contato button:hover {
+            background-color: #003399;
+        }
+
+        .contatoinfo h2 {
+            color: #0044cc;
+        }
+
+        .sessaoinfo div {
+            margin-top: 10px;
+        }
+
+        .sessaoinfo a {
+            text-decoration: none;
+            color: #0044cc;
+            font-weight: bold;
+        }
+
+        .sessaoinfo a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
     <main>
         <!-- Menu Principal -->
         <header class="MenuPrincipal">
-            <!-- Btn Menu -->
-            <label class="hamburguer-menu">
-                <input id="meio" type="checkbox">
-            </label>  
-            <!-- Menu Principal -->
+            <h1>Bem-vindo ao Meu Portfólio</h1>
             <aside class="sidebar">
                 <nav>
                     <ul>
                         <li><a id="Inicio" class="links-web" href="#">Home</a></li>
                         <li><a id="Cronologia" class="links-web" href="#">História</a></li>
-                        <li><a id="Curriculo" href="#" class="links-web">Curriculo</a></li>
-                        <li><a id="Projetos" href="#" class="links-web">Projetos</a></li>
+                        <li><a id="Curriculo" href="#" class="links-web">Currículo</a></li>
                         <li><a id="Contato" href="#" class="links-web">Contato</a></li>
                     </ul>
                 </nav>
             </aside> 
         </header>
+
         <!-- Apresentacao -->
         <section class="Container">
-            <article>
-                <!-- Mid -->
-                <div class="SessaoPrincipal">
-                    <!-- img -->
-                    <img class="ImgPrincipal" src="./img/Arthur.webp" alt="Imagem Principal" srcset="img/Arthur.webp">
-                    <br>
-                    <!-- texto -->
-                    <h1 class="TextoApresentacao">Allan Souza</h1>
-                    <legend class="TextoApresentacao">Desenvolvedor Full Stack // Junior</legend>
-                    <!-- seta -->
-                    <img class="Arrow" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAB70lEQVR4nO2WuUpDURCGvyLaGFxabSzcwML9NVzewVYIuPYurRhSKvEdrDRG8CVcKtdWQaOxipGBP3CIenLuzRUU/OHAhfvPcmbmzAz8449hEFgFjoFz4EXHvgvACjDwE4YngSJQDTzm4EQShluAHPAuxQ/ALjCtaLTp2PcMsCdOVTJZIBXXeBdwImWvwDrQHiBnnA2g7ESjM87Ni1JwrxRExQhwLR2nQGsU4ZwEb4Fu4sNk76RrJ1RoUvmzsI/RPMaVjoq+G6Iojy3nSWFTOu2pejHoVHtIwYWiA3iU7n4fcVUke071SEcw+BU3L93LPsGCSPamXfQCV0AmwHhGXJNxMSfdRz7hS5Hq2+m80+V8TmQcnsl8ld4LnwMlkdLfKK91xLUGxi2V9Ujrn9n4Fs8eB3xONDKOitr+P8VJgc+JEOOGIXFsckYuwnq4RkNqwy3CQx9pxfMMfZHw3byGfXEXk2xECzqJNSI0PqsaqUlhKyT8NUwotOXQ4REw3N40jEZDhbLy2EZpTxPGe5xxvB1FMOWkwhaSqRjG7bY3zhSMvJp1Ok6UNVKtmBqhQzl/c3p/5JWshpQ2mYqUPWqqzaqxpHWG9M7zTrVXFPbYS6mLYeAgwlpeSKiAP6Ff8/xILbWkc6YntgT0fRb7xy/GByntt0NAwyiIAAAAAElFTkSuQmCC" alt="Seta">
-                </div>
-            </article>
+            <h1>Allan Souza</h1>
+            <legend>Desenvolvedor Full Stack // Junior</legend>
         </section>
+
         <!-- Linha do Tempo -->
         <section class="containerSegundo">
             <h1>Minha História</h1>
             <div class="main-container">
-                <div class="text-wrapper right">
-                    <div class="content" id="Vaga01">
-                        <h3>2019</h3>
-                        <a href="https://www.sp.senac.br" target="_blank">Tec. Informatica</a>
-                    </div>
+                <div class="text-wrapper">
+                    <h3>2019</h3>
+                    <a href="https://www.kroton.com.br/" target="_blank">Assistente Administrativo de BackOffice</a>
                 </div>
-                <div class="text-wrapper left">
-                    <div class="content" id="Vaga02">
-                        <h3>2020</h3>
-                        <a href="https://www.wyden.com.br" target="_blank">Superior T.I</a>
-                    </div>
+                <div class="text-wrapper">
+                    <h3>2021</h3>
+                    <a href="https://www.kroton.com.br/" target="_blank">Assistente Administrativo Jurídico</a>
                 </div>
-                <div class="text-wrapper right">
-                    <div class="content" id="Vaga01">
-                        <h3>2021</h3>
-                        <a href="https://b2xcare.com.br" target="_blank">B2X Care</a>
-                    </div>
-                </div>
-                <div class="text-wrapper left">
-                    <div class="content" id="Vaga02">
-                        <h3>2022</h3>
-                        <a href="https://studiogames.net" target="_blank">Studio Games</a>
-                    </div>
-                </div>
-                <div class="text-wrapper right">
-                    <div class="content" id="Vaga03">
-                        <h3>2022</h3>
-                        <a href="https://www.solaresti.net.br" target="_blank">Solares TI</a>
-                    </div>
-                </div>
-                <div class="text-wrapper left">
-                    <div class="content" id="Vaga04">
-                        <h3>2023</h3>
-                        <a href="https://vendexcompany.com.br" target="_blank">Vendex</a>
-                    </div>
+                <div class="text-wrapper">
+                    <h3>2022</h3>
+                    <a href="https://superlogica.com/" target="_blank">Analista Administrativo Pleno - Energia Limpa</a>
                 </div>
             </div>
         </section>
+
         <!-- Curriculo -->
         <section class="containercurriculo">
             <article class="curriculo">
-                <div class="TextoCurriculo">
-                    <legend>Baixe meu currículo e conheça <br> 
-                        minhas qualificações e experiências!</legend>
-                </div>
+                <legend>Baixe meu currículo e conheça minhas qualificações!</legend>
                 <div class="btncurriculo">
-                    <a href="https://drive.google.com/file/d/1OXC3sF6-y-7kviUTCShEXStf2_PPcFFx/view?usp=sharing" target="_blank">Currículo</a>
+                    <a href="#" target="_blank">Currículo</a>
                 </div>
             </article>
         </section>
-        <!-- Projetos -->
-        <section class="containerProjetos">
-            <!-- Primeiro Projeto -->
-            <article class="Projetos">
-                <div class="SessaoProjetosTextoPrimario">
-                    <h1 class="TituloProjeto">Front-end | Back-end</h1>
-                    <h2 class="subTituloProjeto">Tela de capturas de leads</h2>
-                    <br>
-                    <div class="TextoApresentassaoProjeto">
-                        <p>No marketing digital, algo que você precisa conhecer bem é o seu lead. </p>
-                        <p>Mas, afinal, o que é lead? O termo “lead” define potenciais consumidores. </p>
-                        <p>Esse projeto foi um dos meus ultimos na empresa em que trabalhei sozinho, ultilizando html5, css3, js, php e banco de dados próprio da api de leads!</p>
-                    </div>
-                    <br>
-                    <div class="projetosbtn">
-                        <a target="_blank" href="https://metanova.vendexcompany.com.br">VendexLp</a>
-                    </div>
-                </div>
-                <div class="SessaoProjetosImg">
-                    <img class="ImgProjetos" src="img/Projetos/LP.webp" alt="Lead">
-                </div>
-            </article>
-            <!-- Segundo Projeto -->
-            <article class="Projetos">
-                <div class="SessaoProjetosImg">
-                    <img class="ImgProjetos" src="img/Projetos/LP.webp" alt="Lead">
-                </div>
-                <div class="SessaoProjetosTextoPrimario">
-                    <h1 class="TituloProjeto">Front-end | Back-end</h1>
-                    <h2 class="subTituloProjeto">Tela de capturas de leads</h2>
-                    <br>
-                    <div class="TextoApresentassaoProjeto">
-                        <p>No marketing digital, algo que você precisa conhecer bem é o seu lead. </p>
-                        <p>Mas, afinal, o que é lead? O termo “lead” define potenciais consumidores. </p>
-                        <p>Esse projeto foi um dos meus ultimos na empresa em que trabalhei sozinho, ultilizando html5, css3, js, php e banco de dados próprio da api de leads!</p>
-                    </div>
-                    <br>
-                    <div class="projetosbtn">
-                        <a target="_blank" href="https://metanova.vendexcompany.com.br">VendexLp</a>
-                    </div>
-                </div>
-            </article>
-            <!-- Terceiro Projeto -->
-            <article class="Projetos">
-                <div class="SessaoProjetosTextoPrimario">
-                    <h1 class="TituloProjeto">Front-end | Back-end</h1>
-                    <h2 class="subTituloProjeto">Tela de capturas de leads</h2>
-                    <br>
-                    <div class="TextoApresentassaoProjeto">
-                        <p>No marketing digital, algo que você precisa conhecer bem é o seu lead. </p>
-                        <p>Mas, afinal, o que é lead? O termo “lead” define potenciais consumidores. </p>
-                        <p>Esse projeto foi um dos meus ultimos na empresa em que trabalhei sozinho, ultilizando html5, css3, js, php e banco de dados próprio da api de leads!</p>
-                    </div>
-                    <br>
-                    <div class="projetosbtn">
-                        <a target="_blank" href="https://metanova.vendexcompany.com.br">VendexLp</a>
-                    </div>
-                </div>
-                <div class="SessaoProjetosImg">
-                    <img class="ImgProjetos" src="img/Projetos/LP.webp" alt="Lead">
-                </div>
-            </article>
-        </section>
+
         <!-- Contato -->
         <section class="ContainerContato">
-            <div class="container">
-                <form class="form-contato" 
-                    action="https://sheetdb.io/api/v1/wcf33mhkrdlh6" 
-                    method="post" 
-                    name="FormContato"
-                    id="sheetdb-form">
-                    
-                    <h2>Entre em contato</h2>
-                    <label for="nome">Nome Completo:</label>
-                    <input placeholder="Digite seu nome completo:" type="text" id="nome" name="data[nome]" required>
-        
-                    <label for="telefone">Telefone:</label>
-                    <input placeholder="(xx) x xxxx-xxxx" type="tel" id="telefone" name="data[telefone]" required maxlength="11">
-        
-                    <label for="email">E-mail:</label>
-                    <input placeholder="Digite seu E-mail" type="email" id="email" name="data[email]" required>
-        
-                    <button type="submit">Enviar</button>
-                </form>
-                <div class="contatoinfo">
-                    <h2>Info</h2>
-                    <br>
-                    <div class="sessaoinfo">
-                        <div class="classemail">
-                            <i class='bx bxl-linkedin-square'></i>
-                            <a target="_blank" href="https://www.linkedin.com/in/allan-souza-ara%C3%BAjo-866274169">LinkedIn</a>
-                        </div>
-                        <div class="classemail">
-                            <i class='bx bxl-github'></i>
-                            <a target="_blank" href="https://github.com/Allan-Araujo-Souza/Porif-lio">GitHub</a>
-                        </div>
-                        <div class="classemail">
-                            <i class='bx bx-envelope'></i>
-                            <a target="_blank" href="mailto:aallansouzaaraujo96@gmail.com">E-mail</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <form class="form-contato" action="#" method="post">
+                <h2>Entre em contato</h2>
+                <label for="nome">Nome Completo:</label>
+                <input placeholder="Digite seu nome completo:" type="text" id="nome" name="nome" required>
+
+                <label for="telefone">Telefone:</label>
+                <input placeholder="(xx) x xxxx-xxxx" type="tel" id="telefone" name="telefone" required>
+
+                <label for="email">E-mail:</label>
+                <input placeholder="Digite seu E-mail" type="email" id="email" name="email" required>
+
+                <button type="submit">Enviar</button>
+            </form>
         </section>    
     </main>
-    <!-- Js -->
-    <script src="./js/scrollreveal.js"></script>
-    <script src="./js/header.js"></script>
-    <script src="./js/formulario.js"></script>
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </body>
 </html>
