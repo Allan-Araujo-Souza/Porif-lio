@@ -4,8 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio - Allan Souza</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
     <main>
@@ -89,11 +87,5 @@
             </div>
         </section>
     </main>
-
-    <!-- Scripts -->
-    <script src="./js/scrollreveal.js"></script>
-    <script src="./js/header.js"></script>
-    <script src="./js/formulario.js"></script>
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </body>
 </html>
