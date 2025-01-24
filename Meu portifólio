@@ -1,254 +1,99 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfolio Web">
-    <title>Portfolio | Allan</title>
-    <style>
-        /* Reset CSS */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            background-color: #f4f8fc;
-            color: #333;
-        }
-
-        header {
-            background-color: #0044cc;
-            color: white;
-            padding: 10px 20px;
-            text-align: center;
-        }
-
-        header .sidebar ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        header .sidebar ul li {
-            display: inline;
-            margin-right: 15px;
-        }
-
-        header .sidebar ul li a {
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        header .sidebar ul li a:hover {
-            text-decoration: underline;
-        }
-
-        .Container {
-            text-align: center;
-            padding: 50px 20px;
-            background-color: white;
-            margin-bottom: 20px;
-        }
-
-        .Container h1 {
-            font-size: 2.5rem;
-            color: #0044cc;
-        }
-
-        .Container legend {
-            font-size: 1.2rem;
-            color: #666;
-        }
-
-        .containerSegundo, .containercurriculo, .ContainerContato {
-            padding: 30px 20px;
-            background-color: #eaf2ff;
-            margin-bottom: 20px;
-        }
-
-        .containerSegundo h1 {
-            text-align: center;
-            color: #0044cc;
-        }
-
-        .main-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-
-        .text-wrapper {
-            margin: 10px;
-            padding: 20px;
-            background: white;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-
-        .text-wrapper h3 {
-            color: #0044cc;
-        }
-
-        .text-wrapper a {
-            color: #0066ff;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        .text-wrapper a:hover {
-            text-decoration: underline;
-        }
-
-        .curriculo {
-            text-align: center;
-        }
-
-        .btncurriculo a {
-            display: inline-block;
-            padding: 10px 20px;
-            background-color: #0044cc;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-        }
-
-        .btncurriculo a:hover {
-            background-color: #003399;
-        }
-
-        .form-contato {
-            max-width: 500px;
-            margin: 0 auto;
-            background: white;
-            padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-
-        .form-contato h2 {
-            margin-bottom: 15px;
-            color: #0044cc;
-        }
-
-        .form-contato label {
-            font-weight: bold;
-            display: block;
-            margin-top: 10px;
-        }
-
-        .form-contato input {
-            width: 100%;
-            padding: 10px;
-            margin-top: 5px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-
-        .form-contato button {
-            margin-top: 15px;
-            background-color: #0044cc;
-            color: white;
-            border: none;
-            padding: 10px 15px;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
-        .form-contato button:hover {
-            background-color: #003399;
-        }
-
-        .contatoinfo h2 {
-            color: #0044cc;
-        }
-
-        .sessaoinfo div {
-            margin-top: 10px;
-        }
-
-        .sessaoinfo a {
-            text-decoration: none;
-            color: #0044cc;
-            font-weight: bold;
-        }
-
-        .sessaoinfo a:hover {
-            text-decoration: underline;
-        }
-    </style>
+    <title>Portfólio</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
     <main>
-        <!-- Menu Principal -->
-        <header class="MenuPrincipal">
-            <h1>Bem-vindo ao Meu Portfólio</h1>
-            <aside class="sidebar">
-                <nav>
-                    <ul>
-                        <li><a id="Inicio" class="links-web" href="#">Home</a></li>
-                        <li><a id="Cronologia" class="links-web" href="#">História</a></li>
-                        <li><a id="Curriculo" href="#" class="links-web">Currículo</a></li>
-                        <li><a id="Contato" href="#" class="links-web">Contato</a></li>
-                    </ul>
-                </nav>
-            </aside> 
-        </header>
-
-        <!-- Apresentacao -->
-        <section class="Container">
-            <h1>Allan Souza</h1>
-            <legend>Desenvolvedor Full Stack // Junior</legend>
-        </section>
-
         <!-- Linha do Tempo -->
         <section class="containerSegundo">
             <h1>Minha História</h1>
-            <div class="main-container">
-                <div class="text-wrapper">
-                    <h3>2019</h3>
-                    <a href="https://www.kroton.com.br/" target="_blank">Assistente Administrativo de BackOffice</a>
+            <div class="timeline">
+                <div class="timeline-item right">
+                    <div class="content">
+                        <h3>2019</h3>
+                        <a href="https://www.kroton.com.br/" target="_blank">Assistente Administrativo de BackOffice</a>
+                    </div>
                 </div>
-                <div class="text-wrapper">
-                    <h3>2021</h3>
-                    <a href="https://www.kroton.com.br/" target="_blank">Assistente Administrativo Jurídico</a>
+                <div class="timeline-item left">
+                    <div class="content">
+                        <h3>2021</h3>
+                        <a href="https://www.kroton.com.br/" target="_blank">Assistente Administrativo Jurídico</a>
+                    </div>
                 </div>
-                <div class="text-wrapper">
-                    <h3>2022</h3>
-                    <a href="https://superlogica.com/" target="_blank">Analista Administrativo Pleno - Energia Limpa</a>
+                <div class="timeline-item right">
+                    <div class="content">
+                        <h3>2022</h3>
+                        <a href="https://www.anhanguera.com/curso/processos-gerenciais/" target="_blank">Tecnólogo em Processos Gerenciais</a>
+                    </div>
+                </div>
+                <div class="timeline-item left">
+                    <div class="content">
+                        <h3>2022</h3>
+                        <a href="https://superlogica.com/" target="_blank">Analista Administrativo Pleno - Projeto Energia Limpa</a>
+                    </div>
+                </div>
+                <div class="timeline-item right">
+                    <div class="content">
+                        <h3>2022</h3>
+                        <a href="https://superlogica.com/" target="_blank">Analista Administrativo Pleno - Projeto Aplicativo Gruvi</a>
+                    </div>
+                </div>
+                <div class="timeline-item left">
+                    <div class="content">
+                        <h3>2023</h3>
+                        <a href="https://graduacao.uninove.br/?course=tecnologia-em-analise-e-desenvolvimento-de-sistemas" target="_blank">Tec em Análise e Desenvolvimento de Sistemas</a>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- Curriculo -->
-        <section class="containercurriculo">
-            <article class="curriculo">
-                <legend>Baixe meu currículo e conheça minhas qualificações!</legend>
-                <div class="btncurriculo">
-                    <a href="#" target="_blank">Currículo</a>
-                </div>
-            </article>
-        </section>
-
-        <!-- Contato -->
+        <!--Contato-->
         <section class="ContainerContato">
-            <form class="form-contato" action="#" method="post">
-                <h2>Entre em contato</h2>
-                <label for="nome">Nome Completo:</label>
-                <input placeholder="Digite seu nome completo:" type="text" id="nome" name="nome" required>
-
-                <label for="telefone">Telefone:</label>
-                <input placeholder="(xx) x xxxx-xxxx" type="tel" id="telefone" name="telefone" required>
-
-                <label for="email">E-mail:</label>
-                <input placeholder="Digite seu E-mail" type="email" id="email" name="email" required>
-
-                <button type="submit">Enviar</button>
-            </form>
-        </section>    
+            <div class="container">
+                <form class="form-contato" 
+                    action="https://sheetdb.io/api/v1/wcf33mhkrdlh6" 
+                    method="post" 
+                    name="FormContato"
+                    id="sheetdb-form">
+                    
+                    <h2>Entre em contato</h2>
+                    <input placeholder="Digite seu nome completo:" type="text" id="nome" name="data[nome]" required>
+                    <input placeholder="(xx) x xxxx-xxxx" type="tel" id="telefone" name="data[telefone]" required maxlength="11">
+                    <input placeholder="Digite seu E-mail" type="email" id="email" name="data[email]" required>
+                    <button type="submit">Enviar</button>
+                </form>
+                <div class="contatoinfo">
+                    <h2>Info</h2>
+                    <br>
+                    <div class="sessaoinfo">
+                        <div class="classemail">
+                            <i class='bx bxl-linkedin-square'></i>
+                            <a target="_blank" href="https://www.linkedin.com/in/allan-souza-ara%C3%BAjo-866274169">Linkedin</a>
+                        </div>
+                        <div class="classemail">
+                            <i class='bx bxl-github'></i>
+                            <a target="_blank" href="https://github.com/Allan-Araujo-Souza/Porif-lio">Github</a>
+                        </div>
+                        <div class="classemail">
+                            <i class='bx bx-envelope'></i>
+                            <a target="_blank" href="mailto:aallansouzaaraujo96@gmail.com">aallansouzaaraujo96@gmail.com</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--Contato-->
     </main>
+    <!--Js-->
+    <script src="./js/scrollreveal.js"></script>
+    <script src="./js/header.js"></script>
+    <script src="./js/formulario.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <!--Js-->
 </body>
 </html>
