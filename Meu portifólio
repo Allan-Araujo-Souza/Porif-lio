@@ -87,5 +87,13 @@
                     </div>
                 </div>
             </div>
+        </section>
+    </main>
+
+    <!-- Scripts -->
+    <script src="./js/scrollreveal.js"></script>
+    <script src="./js/header.js"></script>
+    <script src="./js/formulario.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </body>
 </html>
