@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfólio</title>
-    <link rel="stylesheet" href="./css/style.css">
+    <title>Portfolio - Allan Souza</title>
+    <link rel="stylesheet" href="styles.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
@@ -12,47 +12,49 @@
         <!-- Linha do Tempo -->
         <section class="containerSegundo">
             <h1>Minha História</h1>
-            <div class="timeline">
-                <div class="timeline-item right">
-                    <div class="content">
-                        <h3>2019</h3>
-                        <a href="https://www.kroton.com.br/" target="_blank">Assistente Administrativo de BackOffice</a>
+            <div class="timeline-container">
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <h3>2019</h3>
+                            <a href="https://www.kroton.com.br/" target="_blank">Assistente Administrativo de BackOffice</a>
+                        </div>
                     </div>
-                </div>
-                <div class="timeline-item left">
-                    <div class="content">
-                        <h3>2021</h3>
-                        <a href="https://www.kroton.com.br/" target="_blank">Assistente Administrativo Jurídico</a>
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <h3>2021</h3>
+                            <a href="https://www.kroton.com.br/" target="_blank">Assistente Administrativo Jurídico</a>
+                        </div>
                     </div>
-                </div>
-                <div class="timeline-item right">
-                    <div class="content">
-                        <h3>2022</h3>
-                        <a href="https://www.anhanguera.com/curso/processos-gerenciais/" target="_blank">Tecnólogo em Processos Gerenciais</a>
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <h3>2022</h3>
+                            <a href="https://www.anhanguera.com/curso/processos-gerenciais/" target="_blank">Tecnólogo em Processos Gerenciais</a>
+                        </div>
                     </div>
-                </div>
-                <div class="timeline-item left">
-                    <div class="content">
-                        <h3>2022</h3>
-                        <a href="https://superlogica.com/" target="_blank">Analista Administrativo Pleno - Projeto Energia Limpa</a>
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <h3>2022</h3>
+                            <a href="https://superlogica.com/" target="_blank">Analista Administrativo Pleno - Projeto Energia Limpa</a>
+                        </div>
                     </div>
-                </div>
-                <div class="timeline-item right">
-                    <div class="content">
-                        <h3>2022</h3>
-                        <a href="https://superlogica.com/" target="_blank">Analista Administrativo Pleno - Projeto Aplicativo Gruvi</a>
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <h3>2022</h3>
+                            <a href="https://superlogica.com/" target="_blank">Analista Administrativo Pleno - Projeto Aplicativo Gruvi</a>
+                        </div>
                     </div>
-                </div>
-                <div class="timeline-item left">
-                    <div class="content">
-                        <h3>2023</h3>
-                        <a href="https://graduacao.uninove.br/?course=tecnologia-em-analise-e-desenvolvimento-de-sistemas" target="_blank">Tec em Análise e Desenvolvimento de Sistemas</a>
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <h3>2023</h3>
+                            <a href="https://graduacao.uninove.br/?course=tecnologia-em-analise-e-desenvolvimento-de-sistemas" target="_blank">Tec em Análise e Desenvolvimento de Sistemas</a>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
-
-        <!--Contato-->
+        
+        <!-- Contato -->
         <section class="ContainerContato">
             <div class="container">
                 <form class="form-contato" 
@@ -60,7 +62,6 @@
                     method="post" 
                     name="FormContato"
                     id="sheetdb-form">
-                    
                     <h2>Entre em contato</h2>
                     <input placeholder="Digite seu nome completo:" type="text" id="nome" name="data[nome]" required>
                     <input placeholder="(xx) x xxxx-xxxx" type="tel" id="telefone" name="data[telefone]" required maxlength="11">
@@ -77,23 +78,14 @@
                         </div>
                         <div class="classemail">
                             <i class='bx bxl-github'></i>
-                            <a target="_blank" href="https://github.com/Allan-Araujo-Souza/Porif-lio">Github</a>
+                            <a target="_blank" href="https://github.com/Allan-Araujo-Souza/Porif-lio">github</a>
                         </div>
                         <div class="classemail">
                             <i class='bx bx-envelope'></i>
-                            <a target="_blank" href="mailto:aallansouzaaraujo96@gmail.com">aallansouzaaraujo96@gmail.com</a>
+                            <a target="_blank" href="mailto:allansouzaaraujo96@gmail.com">aallansouzaaraujo96@gmail.com</a>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
-        <!--Contato-->
-    </main>
-    <!--Js-->
-    <script src="./js/scrollreveal.js"></script>
-    <script src="./js/header.js"></script>
-    <script src="./js/formulario.js"></script>
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-    <!--Js-->
 </body>
 </html>
