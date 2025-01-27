@@ -1,91 +1,99 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - Allan Souza</title>
-</head>
-<body>
-    <main>
-        <!-- Linha do Tempo -->
-        <section class="containerSegundo">
-            <h1>Minha História</h1>
-            <div class="timeline-container">
-                <div class="timeline">
-                    <div class="timeline-item">
-                        <div class="timeline-content">
-                            <h3>2019</h3>
-                            <a href="https://www.kroton.com.br/" target="_blank">Assistente Administrativo de BackOffice</a>
-                        </div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-content">
-                            <h3>2021</h3>
-                            <a href="https://www.kroton.com.br/" target="_blank">Assistente Administrativo Jurídico</a>
-                        </div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-content">
-                            <h3>2022</h3>
-                            <a href="https://www.anhanguera.com/curso/processos-gerenciais/" target="_blank">Tecnólogo em Processos Gerenciais</a>
-                        </div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-content">
-                            <h3>2022</h3>
-                            <a href="https://superlogica.com/" target="_blank">Analista Administrativo Pleno - Projeto Energia Limpa</a>
-                        </div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-content">
-                            <h3>2022</h3>
-                            <a href="https://superlogica.com/" target="_blank">Analista Administrativo Pleno - Projeto Aplicativo Gruvi</a>
-                        </div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-content">
-                            <h3>2023</h3>
-                            <a href="https://graduacao.uninove.br/?course=tecnologia-em-analise-e-desenvolvimento-de-sistemas" target="_blank">Tec em Análise e Desenvolvimento de Sistemas</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <!-- Contato -->
-        <section class="ContainerContato">
-            <div class="container">
-                <form class="form-contato" 
-                    action="https://sheetdb.io/api/v1/wcf33mhkrdlh6" 
-                    method="post" 
-                    name="FormContato"
-                    id="sheetdb-form">
-                    <h2>Entre em contato</h2>
-                    <input placeholder="Digite seu nome completo:" type="text" id="nome" name="data[nome]" required>
-                    <input placeholder="(xx) x xxxx-xxxx" type="tel" id="telefone" name="data[telefone]" required maxlength="11">
-                    <input placeholder="Digite seu E-mail" type="email" id="email" name="data[email]" required>
-                    <button type="submit">Enviar</button>
-                </form>
-                <div class="contatoinfo">
-                    <h2>Info</h2>
-                    <br>
-                    <div class="sessaoinfo">
-                        <div class="classemail">
-                            <i class='bx bxl-linkedin-square'></i>
-                            <a target="_blank" href="https://www.linkedin.com/in/allan-souza-ara%C3%BAjo-866274169">Linkedin</a>
-                        </div>
-                        <div class="classemail">
-                            <i class='bx bxl-github'></i>
-                            <a target="_blank" href="https://github.com/Allan-Araujo-Souza/Porif-lio">github</a>
-                        </div>
-                        <div class="classemail">
-                            <i class='bx bx-envelope'></i>
-                            <a target="_blank" href="mailto:allansouzaaraujo96@gmail.com">aallansouzaaraujo96@gmail.com</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-</body>
-</html>
+import React from "react";
+import { motion } from "framer-motion";
+import { Button } from "@/components/ui/button";
+import "./tailwind.output.css";
+
+const App = () => {
+  return (
+    <div className="min-h-screen bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-100">
+      {/* Header */}
+      <header className="p-4 bg-white dark:bg-gray-800 shadow-md">
+        <div className="container mx-auto flex justify-between items-center">
+          <h1 className="text-2xl font-bold">Allanzoka Portfolio</h1>
+          <nav>
+            <ul className="flex space-x-4">
+              <li><a href="#about" className="hover:text-blue-500">About</a></li>
+              <li><a href="#projects" className="hover:text-blue-500">Projects</a></li>
+              <li><a href="#contact" className="hover:text-blue-500">Contact</a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+
+      {/* Hero Section */}
+      <motion.section
+        className="hero bg-gradient-to-r from-blue-500 to-purple-500 text-white text-center py-20"
+        initial={{ opacity: 0, y: -50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1 }}
+      >
+        <h2 className="text-4xl font-bold mb-4">Welcome to My Portfolio</h2>
+        <p className="text-xl">Showcasing my projects and skills as a developer.</p>
+      </motion.section>
+
+      {/* About Section */}
+      <section id="about" className="py-20 container mx-auto">
+        <h2 className="text-3xl font-bold text-center mb-8">About Me</h2>
+        <p className="text-center max-w-3xl mx-auto">
+          Hi! I’m Allanzoka, a passionate developer with experience in creating innovative solutions and optimizing processes. Let’s build the future together!
+        </p>
+      </section>
+
+      {/* Projects Section */}
+      <section id="projects" className="py-20 bg-gray-200 dark:bg-gray-800">
+        <h2 className="text-3xl font-bold text-center mb-8">Projects</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 container mx-auto">
+          {/* Example Project Card */}
+          <motion.div
+            className="bg-white dark:bg-gray-700 p-4 rounded-2xl shadow-lg hover:shadow-xl"
+            whileHover={{ scale: 1.05 }}
+          >
+            <h3 className="text-xl font-bold mb-2">Project Title</h3>
+            <p className="text-sm">Brief description of the project and its purpose.</p>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Contact Section */}
+      <section id="contact" className="py-20">
+        <h2 className="text-3xl font-bold text-center mb-8">Contact Me</h2>
+        <form className="max-w-lg mx-auto bg-white dark:bg-gray-700 p-6 rounded-2xl shadow-lg">
+          <div className="mb-4">
+            <label htmlFor="name" className="block text-sm font-bold mb-2">Name</label>
+            <input
+              type="text"
+              id="name"
+              className="w-full p-2 border border-gray-300 dark:border-gray-600 rounded-lg"
+            />
+          </div>
+          <div className="mb-4">
+            <label htmlFor="email" className="block text-sm font-bold mb-2">Email</label>
+            <input
+              type="email"
+              id="email"
+              className="w-full p-2 border border-gray-300 dark:border-gray-600 rounded-lg"
+            />
+          </div>
+          <div className="mb-4">
+            <label htmlFor="message" className="block text-sm font-bold mb-2">Message</label>
+            <textarea
+              id="message"
+              className="w-full p-2 border border-gray-300 dark:border-gray-600 rounded-lg"
+              rows="5"
+            ></textarea>
+          </div>
+          <Button type="submit" className="w-full bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded-lg">
+            Send Message
+          </Button>
+        </form>
+      </section>
+
+      {/* Footer */}
+      <footer className="bg-gray-800 text-white text-center py-4">
+        <p>&copy; 2025 Allanzoka. All rights reserved.</p>
+      </footer>
+    </div>
+  );
+};
+
+export default App;
